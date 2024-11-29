@@ -1,0 +1,27 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1732901892
+2_render.png::CompressedTexture2D::2370033264467619269::1732898880::1732901893::1::::<><>::
+3_render.png::CompressedTexture2D::119195200680850642::1732898988::1732901893::1::::<><>::
+Camera3D.gd::GDScript::-1::1732900994::0::1::::<>Camera3D<>::
+CanvasLayer.gd::GDScript::-1::1732900256::0::1::::<>CanvasLayer<>::
+cube_mesh.tscn::PackedScene::3331399874451623709::1732901558::0::1::::<><>::res://viewport.gd
+export_presets.cfg::TextFile::-1::1732872066::0::1::::<><>::
+final_image_render.png::CompressedTexture2D::4018545067663974914::1732880668::1732901893::1::::<><>::
+final_render.png::CompressedTexture2D::6115930916679799871::1732896644::1732901893::1::::<><>::
+gizmo.glb::PackedScene::6135181565050859740::1732866265::1732901893::1::::<><>::
+icon.svg::CompressedTexture2D::7978392474024669257::1729336381::1732901893::1::::<><>::
+image_render_final.png::CompressedTexture2D::5295628905553250504::1732880607::1732901893::1::::<><>::
+LabelText3D.gd::GDScript::-1::1732900742::0::1::::<>CanvasLayer<>::
+miniatura.png::CompressedTexture2D::2528447030910820218::1732871617::1732901893::1::::<><>::
+node_3d.gd::GDScript::-1::1732899561::0::1::::<>Node3D<>::
+node_3d.tscn::PackedScene::8623447321094803432::1732901628::0::1::::<><>::res://node_3d.gd<>res://Camera3D.gd<>res://CanvasLayer.gd<>uid://chs2434y7dous::::res://viewport_grid.tres
+plane_mesh.tscn::PackedScene::8122898751070609285::1732901558::0::1::::<><>::res://viewport.gd
+render final.png::CompressedTexture2D::5964672520635846707::1732878028::1732901893::1::::<><>::
+render.png::CompressedTexture2D::9108731301266991713::1732877976::1732901893::1::::<><>::
+render_final.png::CompressedTexture2D::3287228676037725584::1732898186::1732901893::1::::<><>::
+render_final_text.png::CompressedTexture2D::4712621953261853302::1732901251::1732901893::1::::<><>::
+sphere_mesh.tscn::PackedScene::2068071891719877905::1732901558::0::1::::<><>::res://viewport.gd
+text_mesh.tscn::PackedScene::8463372072078608110::1732901627::0::1::::<><>::res://viewport.gd<>res://LabelText3D.gd
+viewport.gd::GDScript::-1::1732870131::0::1::::<>Area3D<>::
+viewport_grid.glb::PackedScene::6773408293328979582::1732870276::1732901893::1::::<><>::
+viewport_grid.tres::VisualShader::5303014735839921098::1732901627::0::1::::<><>::
