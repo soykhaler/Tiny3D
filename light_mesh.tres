@@ -1,0 +1,40 @@
+[gd_resource type="VisualShader" load_steps=3 format=3 uid="uid://dcekjli8wegos"]
+
+[sub_resource type="VisualShaderNodeColorConstant" id="VisualShaderNodeColorConstant_gdq03"]
+
+[sub_resource type="VisualShaderNodeMultiplyAdd" id="VisualShaderNodeMultiplyAdd_74c6h"]
+output_port_for_preview = 0
+default_input_values = [0, Vector2(0, 0), 1, Vector2(2.225, 1.665), 2, Vector2(0, 0)]
+op_type = 1
+
+[resource]
+code = "shader_type spatial;
+render_mode blend_mix, depth_draw_opaque, cull_back, diffuse_lambert, specular_schlick_ggx;
+
+
+
+
+void fragment() {
+// ColorConstant:2
+	vec4 n_out2p0 = vec4(1.000000, 1.000000, 1.000000, 1.000000);
+
+
+// MultiplyAdd:3
+	vec2 n_in3p1 = vec2(2.22500, 1.66500);
+	vec2 n_in3p2 = vec2(0.00000, 0.00000);
+	vec2 n_out3p0 = fma(vec2(n_out2p0.xy), n_in3p1, n_in3p2);
+
+
+// Output:0
+	EMISSION = vec3(n_out3p0, 0.0);
+
+
+}
+"
+graph_offset = Vector2(-324.656, 88.3076)
+nodes/fragment/0/position = Vector2(480, 140)
+nodes/fragment/2/node = SubResource("VisualShaderNodeColorConstant_gdq03")
+nodes/fragment/2/position = Vector2(-85.0641, 215.685)
+nodes/fragment/3/node = SubResource("VisualShaderNodeMultiplyAdd_74c6h")
+nodes/fragment/3/position = Vector2(180, 200)
+nodes/fragment/connections = PackedInt32Array(3, 0, 0, 5, 2, 0, 3, 0)
