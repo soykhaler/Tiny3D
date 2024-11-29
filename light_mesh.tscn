@@ -174,10 +174,10 @@ color = Color(0.152941, 0.152941, 0.152941, 1)
 
 [node name="ColorPicker" type="ColorPicker" parent="light_options"]
 unique_name_in_owner = true
-offset_left = 728.0
-offset_top = 72.0
-offset_right = 1018.0
-offset_bottom = 640.0
+offset_left = 736.0
+offset_top = 76.0
+offset_right = 1022.0
+offset_bottom = 644.0
 
 [node name="Label" type="Label" parent="light_options"]
 unique_name_in_owner = true
