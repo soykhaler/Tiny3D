@@ -1,4 +1,9 @@
+Button
+HSlider
+Label
+ColorRect
+ColorPicker
+CanvasLayer
 MeshInstance3D
 OmniLight3D
 PointLight2D
-Button

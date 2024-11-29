@@ -4,3 +4,4 @@ res://CanvasLayer.gd
 res://cube_mesh.tscn
 res://light_mesh.tscn
 res://light_mesh.tres
+res://light_options.gd

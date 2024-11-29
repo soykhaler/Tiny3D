@@ -1,7 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://dfypi7e3jn1l3"]
+[gd_scene load_steps=13 format=3 uid="uid://dfypi7e3jn1l3"]
 
 [ext_resource type="Script" path="res://viewport.gd" id="1_5qr2h"]
 [ext_resource type="Shader" uid="uid://dcekjli8wegos" path="res://light_mesh.tres" id="2_rp4rv"]
+[ext_resource type="Script" path="res://light_options.gd" id="3_si6wb"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k1qb2"]
 resource_name = "Material.004"
@@ -150,14 +151,69 @@ skeleton = NodePath("")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_5jiwy")
 
-[node name="OmniLight3D" type="OmniLight3D" parent="."]
+[node name="Light" type="OmniLight3D" parent="."]
+unique_name_in_owner = true
 light_energy = 11.182
-omni_range = 17.759
+omni_range = 3.599
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.259993, 0, 0, 0, 0.259993, 0, 0, 0, 0.259993, 0, 0, 0)
 material_override = SubResource("ShaderMaterial_niifn")
 mesh = SubResource("SphereMesh_oalja")
 
+[node name="light_options" type="CanvasLayer" parent="."]
+script = ExtResource("3_si6wb")
+
+[node name="ColorRect" type="ColorRect" parent="light_options"]
+unique_name_in_owner = true
+offset_left = 322.0
+offset_top = 64.0
+offset_right = 1072.0
+offset_bottom = 656.0
+color = Color(0.152941, 0.152941, 0.152941, 1)
+
+[node name="ColorPicker" type="ColorPicker" parent="light_options"]
+unique_name_in_owner = true
+offset_left = 784.0
+offset_top = 88.0
+offset_right = 1062.0
+offset_bottom = 656.0
+
+[node name="Label" type="Label" parent="light_options"]
+unique_name_in_owner = true
+offset_left = 480.0
+offset_top = 200.0
+offset_right = 591.0
+offset_bottom = 226.0
+text = "Light Intensity"
+
+[node name="Label2" type="Label" parent="light_options"]
+unique_name_in_owner = true
+offset_left = 467.0
+offset_top = 328.0
+offset_right = 618.0
+offset_bottom = 354.0
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Slider" type="HSlider" parent="light_options"]
+unique_name_in_owner = true
+offset_left = 456.0
+offset_top = 288.0
+offset_right = 622.0
+offset_bottom = 304.0
+tick_count = 30
+
+[node name="Button" type="Button" parent="light_options"]
+unique_name_in_owner = true
+offset_left = 520.0
+offset_top = 384.0
+offset_right = 550.0
+offset_bottom = 415.0
+text = "Ok"
+
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[connection signal="value_changed" from="light_options/Slider" to="light_options" method="_on_slider_value_changed"]
+[connection signal="pressed" from="light_options/Button" to="light_options" method="_on_button_pressed"]
