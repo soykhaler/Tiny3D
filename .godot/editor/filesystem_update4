@@ -1,7 +1,7 @@
-res://node_3d.tscn
-res://viewport_grid.tres
-res://CanvasLayer.gd
-res://cube_mesh.tscn
 res://light_mesh.tscn
 res://light_mesh.tres
-res://light_options.gd
+res://viewport_grid.tres
+res://node_3d.tscn
+res://node_3d.gd
+res://mi_escena.tscn
+res://CanvasLayer.gd

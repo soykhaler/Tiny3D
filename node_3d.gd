@@ -9,11 +9,20 @@ func _ready():
 func _process(delta):
 	if Input.is_action_just_pressed("render"):
 		render()
+	if Input.is_action_just_pressed("ui_up"):
+		save_scene()
+		pass
+	if Input.is_action_just_pressed("ui_down"):
+		load_scene()
+		pass
+func save_scene():
+	print("save")
 	pass
-
-
-
-
+	
+func load_scene():
+	print("load")
+	pass
+	
 func render():
 	
 	$viewport_grid.visible = false

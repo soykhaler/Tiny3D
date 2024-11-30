@@ -43,16 +43,12 @@ func _on_button_pressed():
 	var cube_instance = cube_mesh_scene.instantiate()
 	add_child(cube_instance)
 	_hide_buttons()
-	pass # Replace with function body.
-
 
 func _on_button_2_pressed():
 	var sphere_mesh_scene = preload("res://sphere_mesh.tscn")
 	var sphere_instance = sphere_mesh_scene.instantiate()
 	add_child(sphere_instance)
 	_hide_buttons()
-	pass # Replace with function body.
-
 
 func _on_button_3_pressed():
 	var plane_mesh_scene = preload("res://plane_mesh.tscn")
