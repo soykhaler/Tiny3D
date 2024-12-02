@@ -13,7 +13,9 @@ func show_buttons():
 	$Button4.visible = true
 	$Button5.visible = true
 	$Button6.visible = true
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+
+
+
 func _process(delta):
 	if Input.is_action_just_pressed("tab"):
 		$Button.position = get_viewport().get_mouse_position()
