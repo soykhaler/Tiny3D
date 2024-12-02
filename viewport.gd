@@ -14,6 +14,7 @@ func _ready():
 	camera = get_node("/root/Node3D/Camera3D")
 	if not camera:
 		print("No se encontró la cámara")
+		camera = get_node("/root/Node3D2/Camera3D")
 
 func _process(delta):
 	if Input.is_action_just_pressed("delete_button"):

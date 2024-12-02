@@ -30,14 +30,37 @@ func save_scene():
 	else:
 		print("Error al empaquetar la escena.")
 	
-func load_scene():
+func load_scene_legacy():
 	var load_path = "res://saved_scene.tscn"
 	if ResourceLoader.exists(load_path):
 		var error = get_tree().change_scene_to_file(load_path)
 		if error != OK:
 			print("Error al cambiar a la escena guardada: ", error)
 	else:
-		print("El archivo de escena no existe.")
+		print("El archivo de escena existe.")
+		
+func load_scene():
+	# Crear un diálogo de archivo para seleccionar la escena
+	var file_dialog = FileDialog.new()
+	file_dialog.size = Vector2(800, 600)  # Tamaño más grande para mejor visibilidad
+	file_dialog.file_selected.connect(_on_load_file_selected)
+	file_dialog.access = FileDialog.ACCESS_FILESYSTEM
+	file_dialog.file_mode = FileDialog.FILE_MODE_OPEN_FILE
+	file_dialog.add_filter("*.tscn ; Escenas de Godot")
+	add_child(file_dialog)
+	file_dialog.popup_centered()
+	file_dialog.visibility_changed.connect(func(): _on_file_dialog_closed2(weakref(file_dialog)))
+
+func _on_load_file_selected(path):
+	if ResourceLoader.exists(path):
+		var error = get_tree().change_scene_to_file(path)
+		if error != OK:
+			print("Error al cambiar a la escena: ", error)
+	else:
+		print("El archivo de escena no existe en la ruta: ", path)
+
+func _on_file_dialog_closed2(weak_ref):
+	pass
 	
 func render():
 	
@@ -59,10 +82,11 @@ func render():
 func _on_save_file_selected(path):
 	image.save_png(path)
 	await get_tree().create_timer(0.21).timeout
-	get_tree().change_scene_to_file("node_3d.tscn")
-	queue_free()
+	$viewport_grid.visible = true
+
 
 func _on_file_dialog_closed(weak_ref):
+	$viewport_grid.visible = true
 	pass
 
 
