@@ -10,11 +10,34 @@ func _process(delta):
 	if Input.is_action_just_pressed("render"):
 		render()
 	if Input.is_action_just_pressed("save"):
-		save_scene()
-		pass
+		save_scene_dialog()
 	if Input.is_action_just_pressed("load"):
 		load_scene()
-		pass
+
+func save_scene_dialog():
+	var file_dialog = FileDialog.new()
+	file_dialog.size = Vector2(800, 600)  
+	file_dialog.file_selected.connect(_on_save_file_selected2)
+	file_dialog.access = FileDialog.ACCESS_FILESYSTEM
+	file_dialog.file_mode = FileDialog.FILE_MODE_SAVE_FILE
+	file_dialog.add_filter("*.tscn ; Escenas de Godot")
+	add_child(file_dialog)
+	file_dialog.popup_centered()
+
+	
+func _on_save_file_selected2(path):
+	var packed_scene = PackedScene.new()
+	var current_scene = get_tree().get_current_scene()  
+	var result = packed_scene.pack(current_scene)
+	if result == OK:
+		var save_path = path
+		var error = ResourceSaver.save(packed_scene, save_path)
+		if error != OK:
+			print("Error al guardar la escena.")
+		else:
+			print("Escena guardada en: ", save_path)
+	else:
+		print("Error al empaquetar la escena.")
 
 func save_scene():
 	var packed_scene = PackedScene.new()
@@ -86,6 +109,5 @@ func _on_save_file_selected(path):
 
 func _on_file_dialog_closed(weak_ref):
 	$viewport_grid.visible = true
-	pass
 
 
