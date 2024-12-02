@@ -1,10 +1,11 @@
 res://cube_mesh.tscn::d3bfcaf1966a3f1685cfba6d11922723::1732907151::res://.godot/exported/133200997/export-e8533a490f31ad21ca873b0989479bcb-cube_mesh.scn
 res://light_mesh.tres::7a5a69e0ccb980ac687498af2ef48c40::1733155243::res://.godot/exported/133200997/export-403a8de27fba48c946b2ba02c63cfc35-light_mesh.res
 res://light_mesh.tscn::03acb2de6dafef8eb1d30c0b75b9518b::1732930565::res://.godot/exported/133200997/export-de317d7f1418b26ba1d6cb87293f4f6f-light_mesh.scn
-res://light_scene.tscn::15cfe80e54594937fc717d8bfdf1223e::1733156518::res://.godot/exported/133200997/export-fdcef5432990eb1552e77c6264c3adca-light_scene.scn
-res://node_3d.tscn::34471c98c1b14b1175df5bd96c31849d::1733156518::res://.godot/exported/133200997/export-14584830dbc22d3f76a596eed5f4948e-node_3d.scn
+res://light_scene.tscn::15cfe80e54594937fc717d8bfdf1223e::1733157629::res://.godot/exported/133200997/export-fdcef5432990eb1552e77c6264c3adca-light_scene.scn
+res://node_3d.tscn::34471c98c1b14b1175df5bd96c31849d::1733157959::res://.godot/exported/133200997/export-14584830dbc22d3f76a596eed5f4948e-node_3d.scn
 res://plane_mesh.tscn::0d8c125782cc533417fcc8edf77beff0::1732901558::res://.godot/exported/133200997/export-4f14bda9040f442a2d89f1e4a0eb863f-plane_mesh.scn
-res://saved_scene.tscn::2d287bfb1ed5fa702734af3e23b86244::1733156676::res://.godot/exported/133200997/export-200b3e4c47277ab1e6a0d0058f83c187-saved_scene.scn
+res://saved_scene.tscn::2d287bfb1ed5fa702734af3e23b86244::1733157630::res://.godot/exported/133200997/export-200b3e4c47277ab1e6a0d0058f83c187-saved_scene.scn
 res://sphere_mesh.tscn::3a4d880f2a572f866a0f3a705b2c679b::1732901558::res://.godot/exported/133200997/export-a55b107fe2cb77b053e50235a0c42d53-sphere_mesh.scn
 res://text_mesh.tscn::ca217fa6f29916bbb6c0273f77fcc190::1732901627::res://.godot/exported/133200997/export-c37409f7fc1ef8bd8d10e3abe4c0af76-text_mesh.scn
 res://viewport_grid.tres::9e52e52b73f9c2f5a1c40fe0b38bb2d6::1733155243::res://.godot/exported/133200997/export-c4329836fdb648ab7410c91c3518370c-viewport_grid.res
+res://test.tscn::85b82f5394299a5cfa092ef8ba8a0248::1733157630::res://.godot/exported/133200997/export-f0a4ea32b72b64218d23e48a955cbc61-test.scn
