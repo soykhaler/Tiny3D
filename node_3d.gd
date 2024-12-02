@@ -18,7 +18,7 @@ func _process(delta):
 
 func save_scene():
 	var packed_scene = PackedScene.new()
-	var current_scene = get_tree().get_current_scene()  # Obtén la escena actual, incluyendo los nuevos nodos
+	var current_scene = get_tree().get_current_scene()  
 	var result = packed_scene.pack(current_scene)
 	if result == OK:
 		var save_path = "res://saved_scene.tscn"
@@ -40,9 +40,8 @@ func load_scene_legacy():
 		print("El archivo de escena existe.")
 		
 func load_scene():
-	# Crear un diálogo de archivo para seleccionar la escena
 	var file_dialog = FileDialog.new()
-	file_dialog.size = Vector2(800, 600)  # Tamaño más grande para mejor visibilidad
+	file_dialog.size = Vector2(800, 600)  
 	file_dialog.file_selected.connect(_on_load_file_selected)
 	file_dialog.access = FileDialog.ACCESS_FILESYSTEM
 	file_dialog.file_mode = FileDialog.FILE_MODE_OPEN_FILE
