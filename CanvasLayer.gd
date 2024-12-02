@@ -1,10 +1,9 @@
 extends CanvasLayer
 
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	_hide_buttons()
-	pass # Replace with function body.
+
 
 func show_buttons():
 	$Button.visible = true
@@ -61,7 +60,7 @@ func _on_button_3_pressed():
 	add_child(plane_instance)
 	plane_instance.owner = get_tree().get_current_scene()
 	_hide_buttons()
-	pass # Replace with function body.
+
 
 
 func _on_button_4_pressed():
@@ -70,7 +69,7 @@ func _on_button_4_pressed():
 	add_child(text_instance)
 	text_instance.owner = get_tree().get_current_scene()
 	_hide_buttons()
-	pass # Replace with function body.
+
 
 
 
@@ -80,7 +79,7 @@ func _on_button_5_pressed():
 	add_child(light_instance)
 	light_instance.owner = get_tree().get_current_scene()
 	_hide_buttons()
-	pass # Replace with function body.
+
 
 
 func _on_button_6_pressed():
@@ -90,4 +89,4 @@ func _on_button_6_pressed():
 	add_child(sky_instance)
 	sky_instance.owner = get_tree().get_current_scene()
 	_hide_buttons()
-	pass # Replace with function body.
+
