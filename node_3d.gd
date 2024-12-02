@@ -9,19 +9,35 @@ func _ready():
 func _process(delta):
 	if Input.is_action_just_pressed("render"):
 		render()
-	if Input.is_action_just_pressed("ui_up"):
+	if Input.is_action_just_pressed("save"):
 		save_scene()
 		pass
-	if Input.is_action_just_pressed("ui_down"):
+	if Input.is_action_just_pressed("load"):
 		load_scene()
 		pass
+
 func save_scene():
-	print("save")
-	pass
+	var packed_scene = PackedScene.new()
+	var current_scene = get_tree().get_current_scene()  # Obtén la escena actual, incluyendo los nuevos nodos
+	var result = packed_scene.pack(current_scene)
+	if result == OK:
+		var save_path = "res://saved_scene.tscn"
+		var error = ResourceSaver.save(packed_scene, save_path)
+		if error != OK:
+			print("Error al guardar la escena.")
+		else:
+			print("Escena guardada en: ", save_path)
+	else:
+		print("Error al empaquetar la escena.")
 	
 func load_scene():
-	print("load")
-	pass
+	var load_path = "res://saved_scene.tscn"
+	if ResourceLoader.exists(load_path):
+		var error = get_tree().change_scene_to_file(load_path)
+		if error != OK:
+			print("Error al cambiar a la escena guardada: ", error)
+	else:
+		print("El archivo de escena no existe.")
 	
 func render():
 	
